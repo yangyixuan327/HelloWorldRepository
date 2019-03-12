@@ -14,7 +14,7 @@ namespace HelloWorld
 
         }
 
-        protected void btnGetArea_Click(object sender, EventArgs e)
+        protected void btnGetArea_Click1(object sender, EventArgs e)
         {
             double line1 = double.Parse(txtLine1.Text);
             double line2 = double.Parse(txtLine2.Text);
@@ -49,8 +49,6 @@ namespace HelloWorld
             {
                 Response.Write("您输入的三条边不能构成一个三角形");
             }
-
-
         }
     }
 }

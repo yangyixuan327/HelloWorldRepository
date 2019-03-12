@@ -1,4 +1,5 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -33,6 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,6 +44,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
@@ -52,9 +55,9 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -67,13 +70,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Get10!.aspx" />
     <Content Include="GetMax.aspx" />
     <Content Include="Global.asax" />
     <Content Include="homeworkGetTriangleArea.aspx" />
+    <Content Include="homeworkPrintChar.aspx" />
+    <Content Include="homeworkStringOffset.aspx" />
     <Content Include="output.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Get10!.aspx.cs">
+      <DependentUpon>Get10!.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Get10!.aspx.designer.cs">
+      <DependentUpon>Get10!.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GetMax.aspx.cs">
       <DependentUpon>GetMax.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -90,6 +103,20 @@
     </Compile>
     <Compile Include="homeworkGetTriangleArea.aspx.designer.cs">
       <DependentUpon>homeworkGetTriangleArea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homeworkPrintChar.aspx.cs">
+      <DependentUpon>homeworkPrintChar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homeworkPrintChar.aspx.designer.cs">
+      <DependentUpon>homeworkPrintChar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homeworkStringOffset.aspx.cs">
+      <DependentUpon>homeworkStringOffset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homeworkStringOffset.aspx.designer.cs">
+      <DependentUpon>homeworkStringOffset.aspx</DependentUpon>
     </Compile>
     <Compile Include="output.aspx.cs">
       <DependentUpon>output.aspx</DependentUpon>

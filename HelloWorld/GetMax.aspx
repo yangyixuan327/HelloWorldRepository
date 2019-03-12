@@ -16,7 +16,7 @@
             <br />
             请输入第三个数<asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
             <br />
-            <asp:Button ID="Button1" runat="server" Text="输出最大值" />
+            <asp:Button ID="Button1" runat="server" Text="输出最大值" OnClick="Button1_Click1" />
             <br />
         </div>
     </form>

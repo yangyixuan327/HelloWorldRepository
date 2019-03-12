@@ -13,7 +13,8 @@ namespace HelloWorld
         {
         
         }
-        protected void Button1_Click(object sender, EventArgs e)
+
+        protected void Button1_Click1(object sender, EventArgs e)
         {
             double num1 = double.Parse(TextBox1.Text);
             double num2 = double.Parse(TextBox2.Text);
@@ -23,7 +24,6 @@ namespace HelloWorld
             if (num2 >= num1 && num2 >= num3) { Response.Write("最大值是" + num2); };
 
             if (num3 >= num1 && num3 >= num2) { Response.Write("最大值是" + num3); };
-
         }
     }
 }

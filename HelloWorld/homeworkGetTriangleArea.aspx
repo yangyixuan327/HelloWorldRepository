@@ -16,7 +16,7 @@
             <br />
             请输入第三条边<asp:TextBox ID="txtLine3" runat="server"></asp:TextBox>
             <br />
-            <asp:Button ID="btnGetArea" runat="server" Text="求三角形面积" />
+            <asp:Button ID="btnGetArea" runat="server" Text="求三角形面积" OnClick="btnGetArea_Click1" />
         </div>
     </form>
 </body>
